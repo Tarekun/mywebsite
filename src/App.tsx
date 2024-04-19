@@ -2,6 +2,7 @@ import { PaletteMode, ThemeOptions } from "@mui/material";
 import { OptimusUiApp } from "optimus-bo-ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { mainGreenRGB } from "./core/colors";
 import { ROUTES, pageTitleForPath } from "./core/routes";
 import Contacts from "./pages/Contacts";
 import Home from "./pages/Home";
@@ -11,10 +12,10 @@ function makeTheme(palette: PaletteMode): ThemeOptions {
     palette: {
       mode: "dark",
       primary: {
-        main: "rgb(20, 230, 20)",
+        main: mainGreenRGB,
       },
       background: {
-        default: "linear-gradient(to bottom right, #000000 40%, #14E614 150%)",
+        default: `linear-gradient(to bottom right, #000000 40%, ${mainGreenRGB} 150%)`,
       },
     },
   };
