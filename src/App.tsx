@@ -1,24 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import { OptimusUiApp } from "optimus-bo-ui";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { ROUTES, pageTitleForPath } from "./core/routes";
+import Contacts from "./pages/Contacts";
+import Home from "./pages/Home";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+      primary: {
+        main: "rgb(20, 230, 20)",
+      },
+    },
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <OptimusUiApp
+            configureMui={false}
+            themeOverrides={theme}
+            navbarLinks={[
+              {
+                label: "Home",
+                url: ROUTES.home,
+              },
+              {
+                label: "Contacts",
+                url: ROUTES.contacts,
+              },
+            ]}
+            configureReactQuery={true}
+            configureUsers={false}
+            configurePageTitles={true}
+            pageTitleForPath={pageTitleForPath}
+            //TODO: remove these when library is fixed
+            fetchCurrentUser={undefined}
+            isSudo={undefined}
+          >
+            <Routes>
+              <Route path={ROUTES.home} element={<Home />} />
+              <Route path={ROUTES.contacts} element={<Contacts />} />
+            </Routes>
+          </OptimusUiApp>
+        </ThemeProvider>
+      </BrowserRouter>
     </div>
   );
 }
