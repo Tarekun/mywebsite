@@ -18,6 +18,16 @@ function makeTheme(palette: PaletteMode): ThemeOptions {
         default: `linear-gradient(to bottom right, #000000 40%, ${mainGreenRGB} 150%)`,
       },
     },
+    typography: {
+      fontFamily: [
+        "Roboto Mono",
+        "Source Code Pro",
+        "Fira Code",
+        "Consolas",
+        "Monaco",
+        "monospace",
+      ].join(","),
+    },
   };
   return theme;
 }
