@@ -50,6 +50,10 @@ function App() {
               label: "Contacts",
               url: ROUTES.contacts,
             },
+            {
+              label: "Fun Facts",
+              url: ROUTES.funFacts,
+            },
           ]}
           configureReactQuery={true}
           configureUsers={false}
