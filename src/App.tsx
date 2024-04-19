@@ -6,23 +6,22 @@ import { ROUTES, pageTitleForPath } from "./core/routes";
 import Contacts from "./pages/Contacts";
 import Home from "./pages/Home";
 
-function App() {
-  function makeTheme(palette: PaletteMode): ThemeOptions {
-    const theme: ThemeOptions = {
-      palette: {
-        mode: "dark",
-        primary: {
-          main: "rgb(20, 230, 20)",
-        },
-        background: {
-          default:
-            "linear-gradient(to bottom right, #000000 40%, #14E614 150%)",
-        },
+function makeTheme(palette: PaletteMode): ThemeOptions {
+  const theme: ThemeOptions = {
+    palette: {
+      mode: "dark",
+      primary: {
+        main: "rgb(20, 230, 20)",
       },
-    };
-    return theme;
-  }
+      background: {
+        default: "linear-gradient(to bottom right, #000000 40%, #14E614 150%)",
+      },
+    },
+  };
+  return theme;
+}
 
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
