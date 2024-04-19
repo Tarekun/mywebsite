@@ -16,7 +16,7 @@ function App() {
         },
         background: {
           default:
-            "linear-gradient(to bottom right, #000000 20%, #14E614 150%)",
+            "linear-gradient(to bottom right, #000000 40%, #14E614 150%)",
         },
       },
     };
@@ -45,9 +45,6 @@ function App() {
           configureUsers={false}
           configurePageTitles={true}
           pageTitleForPath={pageTitleForPath}
-          //TODO: remove these when library is fixed
-          // fetchCurrentUser={undefined}
-          // isSudo={undefined}
         >
           <Routes>
             <Route path={ROUTES.home} element={<Home />} />
