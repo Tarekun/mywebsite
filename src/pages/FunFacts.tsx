@@ -45,8 +45,6 @@ export default function FunFacts() {
   const [shownFact, setShownFact] = useState<Fact | null>(null);
   const {
     languagePack: { funfactPage },
-    switchLanguage,
-    selectedLocale,
   } = useLanguagePack<LanguagePackSchema>();
 
   function pickAFact() {
@@ -63,15 +61,6 @@ export default function FunFacts() {
         {shownFact !== null && <FactBubble fact={shownFact} />}
         <Button variant="outlined" onClick={pickAFact}>
           {funfactPage.buttonGenerateFact}
-        </Button>
-
-        <Button
-          variant="outlined"
-          onClick={() => {
-            switchLanguage(selectedLocale === "it" ? "en" : "it");
-          }}
-        >
-          cambia lingua
         </Button>
       </Stack>
     </PageContainer>
