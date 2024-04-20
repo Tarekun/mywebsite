@@ -1,3 +1,5 @@
+import { PageLink } from "optimus-bo-ui/dist/components/Navbar";
+
 const ROUTES = {
   home: "/",
   contacts: "/contacts",
@@ -16,4 +18,19 @@ function pageTitleForPath(path: string): string {
   return mappings[path] || defaultName;
 }
 
-export { ROUTES, pageTitleForPath };
+const navbarLinks: PageLink[] = [
+  {
+    label: "Home",
+    url: ROUTES.home,
+  },
+  {
+    label: "Contacts",
+    url: ROUTES.contacts,
+  },
+  {
+    label: "Fun Facts",
+    url: ROUTES.funFacts,
+  },
+];
+
+export { ROUTES, navbarLinks, pageTitleForPath };
