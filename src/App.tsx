@@ -5,6 +5,7 @@ import "./App.css";
 import { mainGreenRGB } from "./core/colors";
 import { ROUTES, navbarLinks, pageTitleForPath } from "./core/routes";
 import Contacts from "./pages/Contacts";
+import FunFacts from "./pages/FunFacts";
 import Home from "./pages/Home";
 
 function makeTheme(palette: PaletteMode): ThemeOptions {
@@ -16,6 +17,7 @@ function makeTheme(palette: PaletteMode): ThemeOptions {
       },
       background: {
         default: `linear-gradient(to bottom right, #000000 40%, ${mainGreenRGB} 150%)`,
+        paper: "#000000",
       },
     },
     typography: {
@@ -58,6 +60,7 @@ function App() {
           <Routes>
             <Route path={ROUTES.home} element={<Home />} />
             <Route path={ROUTES.contacts} element={<Contacts />} />
+            <Route path={ROUTES.funFacts} element={<FunFacts />} />
           </Routes>
         </OptimusUiApp>
       </BrowserRouter>
