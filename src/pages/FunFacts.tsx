@@ -1,8 +1,10 @@
 import { Button, Link, Paper, Stack, Typography } from "@mui/material";
 import { PageContainer } from "optimus-bo-ui";
+import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
 import Header from "../core/Header";
 import { Fact, fax } from "../core/fax";
+import { LanguagePackSchema } from "../core/languagePacks";
 
 interface FactBubbleProps {
   fact: Fact;
@@ -41,6 +43,11 @@ function FactBubble({ fact }: FactBubbleProps) {
 
 export default function FunFacts() {
   const [shownFact, setShownFact] = useState<Fact | null>(null);
+  const {
+    languagePack: { funfactPage },
+    switchLanguage,
+    selectedLocale,
+  } = useLanguagePack<LanguagePackSchema>();
 
   function pickAFact() {
     const idx = Math.floor(Math.random() * fax.length);
@@ -50,12 +57,21 @@ export default function FunFacts() {
   return (
     <PageContainer>
       <Stack spacing={2}>
-        <Header text="Lo sapevi che..." />
+        <Header text={funfactPage.title} />
         <Typography>faccia di emil txt...</Typography>
 
         {shownFact !== null && <FactBubble fact={shownFact} />}
         <Button variant="outlined" onClick={pickAFact}>
-          Genera un fun fact
+          {funfactPage.buttonGenerateFact}
+        </Button>
+
+        <Button
+          variant="outlined"
+          onClick={() => {
+            switchLanguage(selectedLocale === "it" ? "en" : "it");
+          }}
+        >
+          cambia lingua
         </Button>
       </Stack>
     </PageContainer>

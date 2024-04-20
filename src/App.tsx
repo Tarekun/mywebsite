@@ -3,6 +3,7 @@ import { OptimusUiApp } from "optimus-bo-ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { mainGreenRGB, paperBlackRGB } from "./core/colors";
+import { englishPack, italianPack } from "./core/languagePacks";
 import { ROUTES, navbarLinks, pageTitleForPath } from "./core/routes";
 import Contacts from "./pages/Contacts";
 import FunFacts from "./pages/FunFacts";
@@ -56,6 +57,14 @@ function App() {
           configureUsers={false}
           configurePageTitles={true}
           pageTitleForPath={pageTitleForPath}
+          languagePackConfiguration={{
+            configure: true,
+            defaultLocale: "it",
+            packs: {
+              it: italianPack,
+              en: englishPack,
+            },
+          }}
         >
           <Routes>
             <Route path={ROUTES.home} element={<Home />} />
