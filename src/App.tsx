@@ -41,20 +41,28 @@ function App() {
             configure: true,
             makeTheme: makeTheme,
           }}
-          navbarLinks={[
-            {
-              label: "Home",
-              url: ROUTES.home,
+          layoutConfiguration={{
+            configure: true,
+            layoutConfig: {
+              layoutType: "default",
+              navbarConfig: {
+                links: [
+                  {
+                    label: "Home",
+                    url: ROUTES.home,
+                  },
+                  {
+                    label: "Contacts",
+                    url: ROUTES.contacts,
+                  },
+                  {
+                    label: "Fun Facts",
+                    url: ROUTES.funFacts,
+                  },
+                ],
+              },
             },
-            {
-              label: "Contacts",
-              url: ROUTES.contacts,
-            },
-            {
-              label: "Fun Facts",
-              url: ROUTES.funFacts,
-            },
-          ]}
+          }}
           configureReactQuery={true}
           configureUsers={false}
           configurePageTitles={true}
