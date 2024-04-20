@@ -3,7 +3,7 @@ import { OptimusUiApp } from "optimus-bo-ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { mainGreenRGB } from "./core/colors";
-import { ROUTES, pageTitleForPath } from "./core/routes";
+import { ROUTES, navbarLinks, pageTitleForPath } from "./core/routes";
 import Contacts from "./pages/Contacts";
 import Home from "./pages/Home";
 
@@ -46,20 +46,7 @@ function App() {
             layoutConfig: {
               layoutType: "default",
               navbarConfig: {
-                links: [
-                  {
-                    label: "Home",
-                    url: ROUTES.home,
-                  },
-                  {
-                    label: "Contacts",
-                    url: ROUTES.contacts,
-                  },
-                  {
-                    label: "Fun Facts",
-                    url: ROUTES.funFacts,
-                  },
-                ],
+                links: navbarLinks,
               },
             },
           }}
