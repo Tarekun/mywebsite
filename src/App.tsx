@@ -2,6 +2,7 @@ import { PaletteMode, ThemeOptions } from "@mui/material";
 import { OptimusUiApp } from "optimus-bo-ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import NavbarButtons from "./core/NavbarButtons";
 import { mainGreenRGB, paperBlackRGB } from "./core/colors";
 import { englishPack, italianPack } from "./core/languagePacks";
 import { ROUTES, navbarLinks, pageTitleForPath } from "./core/routes";
@@ -50,6 +51,7 @@ function App() {
               layoutType: "default",
               navbarConfig: {
                 links: navbarLinks,
+                trailingButtons: <NavbarButtons />,
               },
             },
           }}
