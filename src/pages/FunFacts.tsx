@@ -2,6 +2,7 @@ import { Button, Link, Paper, Stack, Typography } from "@mui/material";
 import { PageContainer } from "optimus-bo-ui";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
+import Emil from "../core/Emil";
 import Header from "../core/Header";
 import { Fact, fax } from "../core/fax";
 import { LanguagePackSchema } from "../core/languagePacks";
@@ -56,7 +57,7 @@ export default function FunFacts() {
     <PageContainer>
       <Stack spacing={2}>
         <Header text={funfactPage.title} />
-        <Typography>faccia di emil txt...</Typography>
+        <Emil />
 
         {shownFact !== null && <FactBubble fact={shownFact} />}
         <Button variant="outlined" onClick={pickAFact}>
