@@ -53,10 +53,14 @@ function App() {
               },
             },
           }}
+          userConfiguration={{
+            configure: false,
+          }}
+          pageTitleConfiguration={{
+            configure: true,
+            pageTitleForPath: pageTitleForPath,
+          }}
           configureReactQuery={true}
-          configureUsers={false}
-          configurePageTitles={true}
-          pageTitleForPath={pageTitleForPath}
           languagePackConfiguration={{
             configure: true,
             defaultLocale: "it",
