@@ -1,7 +1,10 @@
-import { Button, Typography } from "@mui/material";
 import { PageContainer } from "optimus-bo-ui";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
-import EducationList from "../core/EducationList";
+import Presentazione from "../core/Presentazione";
+import EducationList from "../core/sections/EducationList";
+import Hobbies from "../core/sections/Hobbies";
+import Projects from "../core/sections/Projects";
+import Tools from "../core/sections/Tools";
 
 const educationEventsIt = [
   {
@@ -45,18 +48,11 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <Typography>What up daaaawg</Typography>
-      <Typography>Sezione presentazione</Typography>
-      <Button variant="outlined">prova</Button>
-
-      <Typography>Sezione istruzione/lavoro/CV</Typography>
+      <Presentazione />
       <EducationList events={events} />
-
-      <Typography>Sezione hobby</Typography>
-
-      <Typography>Sezione progetti</Typography>
-
-      <Typography>Sezione tool/strumenti e quantaltro</Typography>
+      <Hobbies />
+      <Projects />
+      <Tools />
     </PageContainer>
   );
 }
