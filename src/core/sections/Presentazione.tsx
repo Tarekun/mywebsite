@@ -3,6 +3,7 @@ import { Box, Card, IconButton, Menu, Stack, Typography } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
 import Typedography from "../Typedography";
+import { activeGreenRGB, mainGreenRGB } from "../colors";
 import { LanguagePackSchema } from "../languagePacks";
 
 export default function Presentazione() {
@@ -36,13 +37,27 @@ export default function Presentazione() {
           {presentationTitle}
         </Typography>
         <Box flexGrow={1} />
-
-        <IconButton
-          sx={{ color: "primary.main", margin: 2 }}
+        <Box
           onClick={(event) => setAnchorEl(event.currentTarget)}
+          sx={{
+            backgroundColor: mainGreenRGB,
+            color: mainGreenRGB,
+            border: 2,
+            "&:hover": {
+              backgroundColor: activeGreenRGB,
+              cursor: "pointer",
+            },
+          }}
         >
-          <CloseIcon />
-        </IconButton>
+          <IconButton disableFocusRipple disableRipple>
+            <CloseIcon
+              sx={{
+                color: "black",
+                margin: 2,
+              }}
+            />
+          </IconButton>
+        </Box>
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}

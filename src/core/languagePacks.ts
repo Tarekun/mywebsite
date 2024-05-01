@@ -3,7 +3,7 @@ const italianPack = {
     languageTooltip: "Cambia lingua",
   },
   homePage: {
-    presentationTitle: "Hey there human",
+    presentationTitle: "introduction.exe",
     presentationText: "qui dentro andrà scritta una presentazione su di me",
     closeBoxCaption:
       "Perché vorresti chiudere questa mia presentazione su cui ho lavorato tanto? (╥﹏╥)",
@@ -21,7 +21,7 @@ const englishPack: LanguagePackSchema = {
     languageTooltip: "Switch language",
   },
   homePage: {
-    presentationTitle: "Hey there human",
+    presentationTitle: "introduction.exe",
     presentationText: "presentation bout me",
     closeBoxCaption:
       "Why would you want to close this presentation about me that I spent so much time working on? (╥﹏╥)",
