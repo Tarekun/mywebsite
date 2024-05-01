@@ -1,8 +1,8 @@
 import { PageContainer } from "optimus-bo-ui";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
-import Presentazione from "../core/Presentazione";
 import EducationList from "../core/sections/EducationList";
 import Hobbies from "../core/sections/Hobbies";
+import Presentazione from "../core/sections/Presentazione";
 import Projects from "../core/sections/Projects";
 import Tools from "../core/sections/Tools";
 

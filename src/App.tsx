@@ -52,6 +52,7 @@ function App() {
               navbarConfig: {
                 links: navbarLinks,
                 trailingButtons: <NavbarButtons />,
+                navbarStyling: "solid",
               },
             },
           }}
