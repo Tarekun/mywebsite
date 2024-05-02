@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
+import { Box, Card, Stack, Typography } from "@mui/material";
 import Header from "../Header";
 
 export type EducationEvent = {
@@ -37,19 +37,13 @@ export default function EducationList({ events }: EducationListProps) {
                 borderWidth: 1,
                 borderStyle: "solid",
                 borderRadius: "16px",
+                padding: 3,
               }}
             >
-              <CardContent>
-                <Header text={educationEvent.title} />
-                <Typography
-                  variant="body2"
-                  align="left"
-                  marginTop={2}
-                  marginLeft={2}
-                >
-                  {educationEvent.description}
-                </Typography>
-              </CardContent>
+              <Header text={educationEvent.title} />
+              <Typography variant="body2" align="left" marginTop={2}>
+                {educationEvent.description}
+              </Typography>
             </Card>
           </Box>
         );

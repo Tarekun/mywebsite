@@ -40,6 +40,7 @@ export default function Typedography({
   const [typedText, setTypedText] = useState("");
   const [idx, setIdx] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  console.log(fullText);
 
   useEffect(() => {
     if (idx >= fullText.length) {
@@ -57,7 +58,7 @@ export default function Typedography({
     }
 
     //TODO: address warning
-  }, [idx, typedText]);
+  }, [idx, typedText, fullText]);
 
   // if the text to be displayed changes restarts the typing
   useEffect(() => {

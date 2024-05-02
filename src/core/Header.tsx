@@ -20,7 +20,7 @@ interface HeaderProps {
 export default function Header({ text }: HeaderProps) {
   return (
     <Box>
-      <Typography variant="h5" color="primary" align="left" marginLeft={2}>
+      <Typography variant="h5" color="primary" align="left" marginBottom={1}>
         {text}
       </Typography>
       <GradientLine />
