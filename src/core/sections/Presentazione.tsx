@@ -1,7 +1,8 @@
 import CloseIcon from "@mui/icons-material/Close";
-import { Box, Card, IconButton, Menu, Stack, Typography } from "@mui/material";
+import { Box, Card, IconButton, Stack, Typography } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
+import CoolMenu from "../CoolMenu";
 import Typedography from "../Typedography";
 import { activeGreenRGB, mainGreenRGB } from "../colors";
 import { LanguagePackSchema } from "../languagePacks";
@@ -58,27 +59,7 @@ export default function Presentazione() {
             />
           </IconButton>
         </Box>
-        <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={() => setAnchorEl(null)}
-          slotProps={{
-            paper: {
-              sx: {
-                border: 1,
-                borderColor: "primary.main",
-                backgroundColor: "black",
-                backgroundImage: "#000",
-              },
-              square: true,
-            },
-          }}
-          MenuListProps={{
-            sx: {
-              padding: 0,
-            },
-          }}
-        >
+        <CoolMenu anchorEl={anchorEl} setAnchorEl={setAnchorEl}>
           <Box
             sx={{
               padding: 3,
@@ -89,7 +70,7 @@ export default function Presentazione() {
           >
             <Typography>{closeBoxCaption}</Typography>
           </Box>
-        </Menu>
+        </CoolMenu>
       </Stack>
 
       <Box
