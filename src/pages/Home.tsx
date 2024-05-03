@@ -48,10 +48,10 @@ export default function Home() {
 
   return (
     <PageContainer>
+      <Hobbies />
       <Projects />
       <Presentazione />
       <EducationList events={events} />
-      <Hobbies />
       <Tools />
     </PageContainer>
   );

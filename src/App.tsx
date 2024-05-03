@@ -6,7 +6,6 @@ import NavbarButtons from "./core/NavbarButtons";
 import { mainGreenRGB, paperBlackRGB } from "./core/colors";
 import { englishPack, italianPack } from "./core/languagePacks";
 import { ROUTES, navbarLinks, pageTitleForPath } from "./core/routes";
-import Contacts from "./pages/Contacts";
 import FunFacts from "./pages/FunFacts";
 import Home from "./pages/Home";
 
@@ -75,7 +74,6 @@ function App() {
         >
           <Routes>
             <Route path={ROUTES.home} element={<Home />} />
-            <Route path={ROUTES.contacts} element={<Contacts />} />
             <Route path={ROUTES.funFacts} element={<FunFacts />} />
           </Routes>
         </OptimusUiApp>
