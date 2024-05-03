@@ -1,8 +1,10 @@
+import HelpIcon from "@mui/icons-material/Help";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import SubdirectoryArrowRightIcon from "@mui/icons-material/SubdirectoryArrowRight";
 import {
   Box,
   Grid,
+  Icon,
   Link,
   List,
   ListItem,
@@ -24,12 +26,17 @@ interface DirectoryItemProps {
 function DirectoryItem({ label, tooltip }: DirectoryItemProps) {
   return (
     <ListItem>
-      <Tooltip title={tooltip}>
-        <ListItemButton>
-          <SubdirectoryArrowRightIcon sx={{ marginRight: 1 }} />
-          <ListItemText primary={label} />
-        </ListItemButton>
-      </Tooltip>
+      <ListItemButton disableRipple sx={{ cursor: "default" }}>
+        <SubdirectoryArrowRightIcon sx={{ marginRight: 1 }} />
+        <ListItemText primary={label} />
+        <Box flexGrow={1} />
+
+        <Tooltip title={tooltip}>
+          <Icon>
+            <HelpIcon />
+          </Icon>
+        </Tooltip>
+      </ListItemButton>
     </ListItem>
   );
 }
@@ -42,12 +49,17 @@ interface FileItemProps {
 function FileItem({ label, tooltip, onClick }: FileItemProps) {
   return (
     <ListItem>
-      <Tooltip title={tooltip}>
-        <ListItemButton sx={{ marginLeft: 4 }} onClick={onClick}>
-          <InsertDriveFileIcon sx={{ marginRight: 1, color: "primary.main" }} />
-          <ListItemText primary={label} sx={{ color: "primary.main" }} />
-        </ListItemButton>
-      </Tooltip>
+      <ListItemButton sx={{ marginLeft: 4 }} onClick={onClick}>
+        <InsertDriveFileIcon sx={{ marginRight: 1, color: "primary.main" }} />
+        <ListItemText primary={label} sx={{ color: "primary.main" }} />
+        <Box flexGrow={1} />
+
+        <Tooltip title={tooltip}>
+          <Icon>
+            <HelpIcon />
+          </Icon>
+        </Tooltip>
+      </ListItemButton>
     </ListItem>
   );
 }
