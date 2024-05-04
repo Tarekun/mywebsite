@@ -13,7 +13,7 @@ const hobbies = [
   {
     name: "Matematica",
     description:
-      "La matematica (e la logica) è diventata la mia scienza preferita in assoluto e devo dire che un po' mi pento di aver studiato informatica invece. Studio matematica nel tempo libero da tempo e direi che l'argomento che ho approfondito di più in assoluto è stata la Teoria dei Tipi. Per poter ampliare l'argomento ancora di più, il mio prossimo obbiettivo è di studiare un po' di Teoria delle Categorie e Teoria delle Omotopie per poter poi comprendere per bene Homotopy Type Theory. Ho anche in programma lo studio completo dell'Analisi Reale perché un giorno vorrei poter studiare come si deve Quantum Field Theory, ma qui sto procrastinando da anni (devo iniziare a fare Teoria della Misura, Analisi 2)",
+      "La matematica (includendo anche la logica) è diventata la mia scienza preferita in assoluto e devo dire che un po' mi pento di aver studiato informatica invece. Studio matematica nel tempo libero da tempo e direi che l'argomento che ho approfondito di più in assoluto è stata la Teoria dei Tipi. Per poter ampliare l'argomento ancora di più, il mio prossimo obbiettivo è di studiare un po' di Teoria delle Categorie e Teoria delle Omotopie per poter poi comprendere per bene Homotopy Type Theory. Ho anche in programma lo studio completo dell'Analisi Reale perché un giorno vorrei poter studiare come si deve Quantum Field Theory, ma qui sto procrastinando da anni (devo iniziare a fare Teoria della Misura, Analisi 2)",
     img: "https://www.researchgate.net/publication/344704718/figure/fig1/AS:947446209327104@1602900187484/Martin-Loef-type-theory.png",
   },
   {
