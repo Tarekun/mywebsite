@@ -45,6 +45,13 @@ const italianPack = {
       optimusUiDescription:
         "Capita spesso di finire a reimplementare gli stessi componenti React in diverse applicazioni. E perché riscrivere questo codice ogni volta con leggere differenze, quando questi componenti possono essere resi generici e riutilizzati su qualsiasi altra applicazione si vorrà mai scrivere? Per questo motivo ho deciso di raccogliere sia svariati componenti UI utili e riutilizzabili, oltre che fornire un unico componente (OptimusUiApp) che permettesse di configurare in automatico librerie react comuni come MaterialUI o ReactQuery evitando così di dover ripetere il codice di configurazione dello stack tutte le volte. La libreria è pubblica, si trova su github, può essere liberamente installata con npm install optimus-bo-ui e commenti o contribuzioni sono più che i benvenuti!",
     },
+    tools: {
+      title: "Librerie, framework, strumenti e altro",
+      expertLabel: "Conoscenze professionali",
+      briefLabel: "Conoscenze superficiali",
+      description:
+        "Questa è una lista degli strumenti, librerie, framework che ho imparato e usato nel corso degli anni divise tra quelle in cui sono effettivamente esperto e conosco bene e quelle che ho usato in passato o superficialmente",
+    },
   },
   funfactPage: {
     title: "Lo sapevi che...",
@@ -93,6 +100,13 @@ const englishPack: LanguagePackSchema = {
       optimusUiLabel: "optimus-bo-ui",
       optimusUiTooltip: "React library based on other standard react libraries",
       optimusUiDescription: "tobe translated",
+    },
+    tools: {
+      title: "Liraries, frameworks, tools and what not",
+      expertLabel: "Professional expertise",
+      briefLabel: "Surface level expertise",
+      description:
+        "This is a list of the tools, libraries, frameworks that i learnt and used over the years split in the ones where I'm an expert and very skilled and those that I used in the past or briefly",
     },
   },
   funfactPage: {
