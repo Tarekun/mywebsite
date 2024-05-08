@@ -16,14 +16,30 @@ function GradientLine() {
 
 interface HeaderProps {
   text: string;
+  underline?: boolean;
+  align?: "left" | "right";
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
-export default function Header({ text }: HeaderProps) {
+export default function Header({
+  text,
+  underline = true,
+  align = "left",
+  variant = "h4",
+}: HeaderProps) {
   return (
     <Box>
-      <Typography variant="h5" color="primary" align="left" marginBottom={1}>
+      <Typography
+        variant={variant}
+        color="primary"
+        align={align}
+        marginBottom={1}
+        sx={{
+          textShadow: `2px 2px 4px ${mainGreenRGB}`,
+        }}
+      >
         {text}
       </Typography>
-      <GradientLine />
+      {underline && <GradientLine />}
     </Box>
   );
 }

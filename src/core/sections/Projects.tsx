@@ -16,6 +16,7 @@ import {
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
 import Header from "../Header";
+import SectionBox from "../SectionBox";
 import Typedography from "../Typedography";
 import { LanguagePackSchema } from "../languagePacks";
 
@@ -81,13 +82,7 @@ export default function Projects() {
   console.log(project);
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "black",
-        border: 1,
-        borderColor: "primary.main",
-      }}
-    >
+    <SectionBox>
       <Box padding={2}>
         <Header text={projects.sectionTitle} />
       </Box>
@@ -168,6 +163,6 @@ export default function Projects() {
           )}
         </Grid>
       </Grid>
-    </Box>
+    </SectionBox>
   );
 }

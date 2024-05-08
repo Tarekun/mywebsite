@@ -40,7 +40,7 @@ export default function EducationList({ events }: EducationListProps) {
                 padding: 3,
               }}
             >
-              <Header text={educationEvent.title} />
+              <Header text={educationEvent.title} variant="h5" />
               <Typography variant="body2" align="left" marginTop={2}>
                 {educationEvent.description}
               </Typography>

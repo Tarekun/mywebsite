@@ -1,4 +1,4 @@
-import { PageContainer } from "optimus-bo-ui";
+import { Stack } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import EducationList from "../core/sections/EducationList";
 import Hobbies from "../core/sections/Hobbies";
@@ -47,12 +47,12 @@ export default function Home() {
     selectedLocale === "it" ? educationEventsIt : educationEventsEn;
 
   return (
-    <PageContainer>
+    <Stack spacing={5} sx={{ width: "100%" }}>
       <Hobbies />
       <Projects />
       <Presentazione />
       <EducationList events={events} />
       <Tools />
-    </PageContainer>
+    </Stack>
   );
 }

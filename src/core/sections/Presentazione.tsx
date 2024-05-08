@@ -3,6 +3,7 @@ import { Box, Card, IconButton, Stack, Typography } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
 import CoolMenu from "../CoolMenu";
+import Header from "../Header";
 import Typedography from "../Typedography";
 import { activeGreenRGB, mainGreenRGB } from "../colors";
 import { LanguagePackSchema } from "../languagePacks";
@@ -29,14 +30,9 @@ export default function Presentazione() {
       }}
     >
       <Stack direction="row" alignItems="center">
-        <Typography
-          variant="h4"
-          color="primary.main"
-          sx={{ textAlign: "left" }}
-          margin={2}
-        >
-          {presentationTitle}
-        </Typography>
+        <Box padding={1} paddingLeft={2}>
+          <Header text={presentationTitle} underline={false} />
+        </Box>
         <Box flexGrow={1} />
         <Box
           onClick={(event) => setAnchorEl(event.currentTarget)}

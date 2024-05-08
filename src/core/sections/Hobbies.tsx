@@ -6,6 +6,8 @@ import "swiper/css";
 import { Controller, Pagination as SwiperPagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../App.css";
+import Header from "../Header";
+import SectionBox from "../SectionBox";
 import { mainGreenRGB } from "../colors";
 import { LanguagePackSchema } from "../languagePacks";
 
@@ -81,14 +83,7 @@ function HobbyBox({ hobbyIdx }: HobbyBoxProps) {
         </Grid>
 
         <Grid xs={12} md={7} padding={2}>
-          <Typography
-            textAlign="right"
-            variant="h4"
-            color="primary.main"
-            marginBottom={1}
-          >
-            {hobby.name}
-          </Typography>
+          <Header text={hobby.name} underline={false} align="right" />
           <Typography textAlign="right">{hobby.description}</Typography>
         </Grid>
       </Grid>
@@ -116,21 +111,8 @@ export default function Hobbies() {
   } = useLanguagePack<LanguagePackSchema>();
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "black",
-      }}
-      padding={2}
-      marginBottom={2}
-    >
-      <Typography
-        variant="h4"
-        color="primary.main"
-        sx={{ textAlign: "left" }}
-        marginBottom={2}
-      >
-        {title}
-      </Typography>
+    <SectionBox padding={2}>
+      <Header text={title} underline={false} />
       <Typography textAlign="left" marginBottom={3}>
         {introduction}
       </Typography>
@@ -177,6 +159,6 @@ export default function Hobbies() {
           color="primary"
         />
       </Box>
-    </Box>
+    </SectionBox>
   );
 }

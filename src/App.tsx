@@ -37,48 +37,46 @@ function makeTheme(palette: PaletteMode): ThemeOptions {
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <OptimusUiApp
-          muiConfiguration={{
-            configure: true,
-            makeTheme: makeTheme,
-          }}
-          layoutConfiguration={{
-            configure: true,
-            layoutConfig: {
-              layoutType: "default",
-              navbarConfig: {
-                links: navbarLinks,
-                trailingButtons: <NavbarButtons />,
-                navbarStyling: "transparent",
-              },
+    <BrowserRouter>
+      <OptimusUiApp
+        muiConfiguration={{
+          configure: true,
+          makeTheme: makeTheme,
+        }}
+        layoutConfiguration={{
+          configure: true,
+          layoutConfig: {
+            layoutType: "default",
+            navbarConfig: {
+              links: navbarLinks,
+              trailingButtons: <NavbarButtons />,
+              navbarStyling: "transparent",
             },
-          }}
-          userConfiguration={{
-            configure: false,
-          }}
-          pageTitleConfiguration={{
-            configure: true,
-            pageTitleForPath: pageTitleForPath,
-          }}
-          configureReactQuery={true}
-          languagePackConfiguration={{
-            configure: true,
-            defaultLocale: "it",
-            packs: {
-              it: italianPack,
-              en: englishPack,
-            },
-          }}
-        >
-          <Routes>
-            <Route path={ROUTES.home} element={<Home />} />
-            <Route path={ROUTES.funFacts} element={<FunFacts />} />
-          </Routes>
-        </OptimusUiApp>
-      </BrowserRouter>
-    </div>
+          },
+        }}
+        userConfiguration={{
+          configure: false,
+        }}
+        pageTitleConfiguration={{
+          configure: true,
+          pageTitleForPath: pageTitleForPath,
+        }}
+        configureReactQuery={true}
+        languagePackConfiguration={{
+          configure: true,
+          defaultLocale: "it",
+          packs: {
+            it: italianPack,
+            en: englishPack,
+          },
+        }}
+      >
+        <Routes>
+          <Route path={ROUTES.home} element={<Home />} />
+          <Route path={ROUTES.funFacts} element={<FunFacts />} />
+        </Routes>
+      </OptimusUiApp>
+    </BrowserRouter>
   );
 }
 
