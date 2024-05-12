@@ -1,18 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { mainGreenRGB } from "./colors";
-
-function GradientLine() {
-  return (
-    <Box
-      sx={{
-        height: "4px",
-        width: "100%",
-        background: `linear-gradient(to top right, ${mainGreenRGB} 0%, #000000 100%)`,
-        borderRadius: 2,
-      }}
-    />
-  );
-}
+import { mainGreenRGB } from "../colors";
+import GradientLine from "./GradientLine";
 
 interface HeaderProps {
   text: string;

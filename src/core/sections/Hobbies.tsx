@@ -6,9 +6,10 @@ import "swiper/css";
 import { Controller, Pagination as SwiperPagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../App.css";
-import Header from "../Header";
-import SectionBox from "../SectionBox";
 import { mainGreenRGB } from "../colors";
+import GradientLine from "../components/GradientLine";
+import Header from "../components/Header";
+import SectionBox from "../components/SectionBox";
 import { LanguagePackSchema } from "../languagePacks";
 
 const hobbies = [
@@ -113,9 +114,10 @@ export default function Hobbies() {
   return (
     <SectionBox padding={2}>
       <Header text={title} underline={false} />
-      <Typography textAlign="left" marginBottom={3}>
+      <Typography textAlign="left" marginBottom={2}>
         {introduction}
       </Typography>
+      <GradientLine />
 
       <Swiper
         onSwiper={(swiper: SwiperClass) => (swiperRef.current = swiper)}

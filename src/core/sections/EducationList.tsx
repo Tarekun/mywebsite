@@ -1,5 +1,5 @@
 import { Box, Card, Stack, Typography } from "@mui/material";
-import Header from "../Header";
+import Header from "../components/Header";
 
 export type EducationEvent = {
   title: string;

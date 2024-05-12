@@ -2,10 +2,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Box, Card, IconButton, Stack, Typography } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
-import CoolMenu from "../CoolMenu";
-import Header from "../Header";
-import Typedography from "../Typedography";
 import { activeGreenRGB, mainGreenRGB } from "../colors";
+import CoolMenu from "../components/CoolMenu";
+import Header from "../components/Header";
+import Typedography from "../components/Typedography";
 import { LanguagePackSchema } from "../languagePacks";
 
 export default function Presentazione() {

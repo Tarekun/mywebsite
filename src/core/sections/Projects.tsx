@@ -15,9 +15,9 @@ import {
 } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
-import Header from "../Header";
-import SectionBox from "../SectionBox";
-import Typedography from "../Typedography";
+import Header from "../components/Header";
+import SectionBox from "../components/SectionBox";
+import Typedography from "../components/Typedography";
 import { LanguagePackSchema } from "../languagePacks";
 
 interface DirectoryItemProps {

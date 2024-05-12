@@ -7,8 +7,8 @@ import {
   Typography,
 } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
-import Header from "../Header";
-import SectionBox from "../SectionBox";
+import Header from "../components/Header";
+import SectionBox from "../components/SectionBox";
 import { LanguagePackSchema } from "../languagePacks";
 
 const expert = [
@@ -51,7 +51,7 @@ export default function Tools() {
         <Typography>{tools.description}</Typography>
 
         <Grid container>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             <Typography color="primary.main">{tools.expertLabel}:</Typography>
             <List dense>
               {expert.map((label) => {
@@ -63,7 +63,7 @@ export default function Tools() {
               })}
             </List>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6}>
             <Typography color="primary.main">{tools.briefLabel}:</Typography>
             <List dense>
               {brief.map((label) => {

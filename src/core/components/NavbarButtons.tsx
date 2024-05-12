@@ -9,10 +9,10 @@ import {
 } from "@mui/material";
 import { useLanguagePack } from "optimus-bo-ui/dist/contexts/LanguagePackContext";
 import { useState } from "react";
-import EnglandFlag from "../svg/english.svg";
-import ItalyFlag from "../svg/italian.svg";
+import EnglandFlag from "../../svg/english.svg";
+import ItalyFlag from "../../svg/italian.svg";
+import { LanguagePackSchema } from "../languagePacks";
 import CoolMenu from "./CoolMenu";
-import { LanguagePackSchema } from "./languagePacks";
 
 export default function NavbarButtons() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);

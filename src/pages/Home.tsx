@@ -47,7 +47,7 @@ export default function Home() {
     selectedLocale === "it" ? educationEventsIt : educationEventsEn;
 
   return (
-    <Stack spacing={5} sx={{ width: "100%", maxWidth: 1200 }}>
+    <Stack spacing={10} paddingTop={4} sx={{ width: "100%", maxWidth: 1200 }}>
       <Presentazione />
       <EducationList events={events} />
       <Projects />

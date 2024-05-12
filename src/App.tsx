@@ -1,11 +1,11 @@
-import { PaletteMode, ThemeOptions } from "@mui/material";
+import { Box, PaletteMode, ThemeOptions, Typography } from "@mui/material";
 import { OptimusUiApp } from "optimus-bo-ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NavbarButtons from "./core/NavbarButtons";
 import { mainGreenRGB, paperBlackRGB } from "./core/colors";
+import NavbarButtons from "./core/components/NavbarButtons";
 import { englishPack, italianPack } from "./core/languagePacks";
-import { ROUTES, navbarLinks, pageTitleForPath } from "./core/routes";
+import { ROUTES, pageTitleForPath } from "./core/routes";
 import FunFacts from "./pages/FunFacts";
 import Home from "./pages/Home";
 
@@ -48,9 +48,13 @@ function App() {
           layoutConfig: {
             layoutType: "default",
             navbarConfig: {
-              links: navbarLinks,
               trailingButtons: <NavbarButtons />,
               navbarStyling: "transparent",
+              header: (
+                <Typography variant="h5" fontWeight="bold">
+                  iaisy://daniele@tarek
+                </Typography>
+              ),
             },
           },
         }}
@@ -61,7 +65,9 @@ function App() {
           configure: true,
           pageTitleForPath: pageTitleForPath,
         }}
-        configureReactQuery={true}
+        reactQueryConfiguration={{
+          configure: true,
+        }}
         languagePackConfiguration={{
           configure: true,
           defaultLocale: "it",
@@ -71,10 +77,12 @@ function App() {
           },
         }}
       >
-        <Routes>
-          <Route path={ROUTES.home} element={<Home />} />
-          <Route path={ROUTES.funFacts} element={<FunFacts />} />
-        </Routes>
+        <Box padding={2}>
+          <Routes>
+            <Route path={ROUTES.home} element={<Home />} />
+            <Route path={ROUTES.funFacts} element={<FunFacts />} />
+          </Routes>
+        </Box>
       </OptimusUiApp>
     </BrowserRouter>
   );
