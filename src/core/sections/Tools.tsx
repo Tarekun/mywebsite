@@ -1,5 +1,5 @@
 import {
-  Box,
+  Grid,
   List,
   ListItem,
   ListItemText,
@@ -22,9 +22,20 @@ const expert = [
 
   "Java",
   "Spring boot",
+  "Kotlin",
+  "Jetpack Compose",
+
   "C",
+  "Docker",
 ];
-const brief = ["OCaml", "C++", "C#", "Angular", "Svelte", "Unity"];
+const brief = [
+  "OCaml",
+  "C#",
+  "Angular",
+  "Svelte",
+  "Unity",
+  "Prometheus+Grafana",
+];
 
 export default function Tools() {
   const {
@@ -39,30 +50,32 @@ export default function Tools() {
         <Header text={tools.title} />
         <Typography>{tools.description}</Typography>
 
-        <Box>
-          <Typography color="primary.main">{tools.expertLabel}:</Typography>
-          <List dense>
-            {expert.map((label) => {
-              return (
-                <ListItem key={label}>
-                  <ListItemText primary={label} />
-                </ListItem>
-              );
-            })}
-          </List>
-        </Box>
-        <Box>
-          <Typography color="primary.main">{tools.briefLabel}:</Typography>
-          <List dense>
-            {brief.map((label) => {
-              return (
-                <ListItem key={label}>
-                  <ListItemText primary={label} />
-                </ListItem>
-              );
-            })}
-          </List>
-        </Box>
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <Typography color="primary.main">{tools.expertLabel}:</Typography>
+            <List dense>
+              {expert.map((label) => {
+                return (
+                  <ListItem key={label}>
+                    <ListItemText primary={label} />
+                  </ListItem>
+                );
+              })}
+            </List>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography color="primary.main">{tools.briefLabel}:</Typography>
+            <List dense>
+              {brief.map((label) => {
+                return (
+                  <ListItem key={label}>
+                    <ListItemText primary={label} />
+                  </ListItem>
+                );
+              })}
+            </List>
+          </Grid>
+        </Grid>
       </Stack>
     </SectionBox>
   );
