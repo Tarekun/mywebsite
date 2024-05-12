@@ -71,15 +71,14 @@ const impactLink =
 const optimusUiLink = "https://github.com/Tarekun/optimus-bo-ui";
 
 export default function Projects() {
-  const [project, setProject] = useState("");
-  const [link, setLink] = useState<string | null>(null);
-
   const {
     languagePack: {
       homePage: { projects },
     },
   } = useLanguagePack<LanguagePackSchema>();
-  console.log(project);
+
+  const [project, setProject] = useState(projects.defaultDescription);
+  const [link, setLink] = useState<string | null>(null);
 
   return (
     <SectionBox>

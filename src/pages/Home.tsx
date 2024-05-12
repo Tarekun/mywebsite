@@ -20,7 +20,12 @@ const educationEventsIt = [
   {
     title: "Tesi - Transfer Package per Matita",
     description:
-      'Nel 2024 sono riuscito a laurearmi presentato una tesi su Teoria dei Tipi! All\'Università di Bologna è stato sviluppato Matita un dimostratore di teoremi per cui ho implementato un transfer package, cioè un modulo che permetta di "trasferire" teoremi dimostrati su un oggetto matematico ad uno *equivalente*',
+      'Nel 2024 ho presentato una tesi su Teoria dei Tipi! All\'Università di Bologna è stato sviluppato Matita un dimostratore di teoremi per cui ho implementato un transfer package, cioè un modulo che permetta di "trasferire" teoremi dimostrati su un oggetto matematico ad uno *equivalente*',
+  },
+  {
+    title: "Optimus",
+    description:
+      "Ad oggi io e mio cugino abbiamo fondato Optimus dove sviluppiamo gestionali per automazione di processi aziendali e applicazioni web. Se sei nell'area di Bologna, sappi che a casalecchio esiste CasaLab uno spazio di coworking piuttosto economico; dai un occhio al loro sito e fammi sapere se hai dei suggerimenti su come migliorarlo :)",
   },
 ];
 const educationEventsEn = [
@@ -37,7 +42,12 @@ const educationEventsEn = [
   {
     title: "Thesis - Transfer Package for Matita",
     description:
-      'In 2024 I managed to graduate presenting a thesis on Type Theory! At Bologna\'s University was developed Matita an interactive theorem prover for which I implemented a transfer package, a module that allows "transferring" theorems proved on one mathematical object to any other *equivalent* object',
+      'In 2024 I presented a thesis on Type Theory! At Bologna\'s University was developed Matita an interactive theorem prover for which I implemented a transfer package, a module that allows "transferring" theorems proved on one mathematical object to any other *equivalent* object',
+  },
+  {
+    title: "Optimus",
+    description:
+      "Recently me and my cousin founded Optimus where we develop managing tools to automate internal processes for businesses and webapps. If you are in the Bologna area, you should know that in Casalecchio there is CasaLab a pretty cheap coworking space; you should have a look at their website and let me know if you have any suggestions :)",
   },
 ];
 
