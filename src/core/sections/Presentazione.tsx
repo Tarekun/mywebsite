@@ -80,6 +80,7 @@ export default function Presentazione() {
           margin: 2,
           sx: {
             textAlign: "left",
+            whiteSpace: "pre-wrap",
           },
         }}
       />

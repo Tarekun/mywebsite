@@ -4,7 +4,8 @@ const italianPack = {
   },
   homePage: {
     presentationTitle: "introduction.exe",
-    presentationText: "qui dentro andrà scritta una presentazione su di me",
+    presentationText:
+      "Ciao! Mi chiamo Daniele e questo è il mio sito web. Sono un informatico, studio all'Università di Bologna e nel 2022/23 ho lavorato come sviluppatore web al CERN, a Ginevra. L'informatica non è solo un lavoro ma anche un hobby per me infatti ho un Raspberry Pi 5 che utilizzo di continuo come cloud server e su cui ho installato varie applicazioni che uso quotidianamente sia per lavorare che per svago.\nL'informatica non è l'unica scienza che mi piace studiare e nel tempo libero mi dedico un po' anche a fisica e matematica; in particolare la mia tesi triennale ho deciso di farla proprio su Teoria dei Tipi, prima di decarmi completamente alle intelligenze artificiali per i miei prossimi studi.\nI miei interessi però non sono solo tecnici e accademici, infatti sono anche un grande appassionato di moda, di musica e di videogiochi.\nIn questo sito potrai trovare qualche informazione su di me",
     closeBoxCaption:
       "Perché vorresti chiudere questa mia presentazione su cui ho lavorato tanto? (╥﹏╥)",
     hobbies: {
@@ -70,7 +71,8 @@ const englishPack: LanguagePackSchema = {
   },
   homePage: {
     presentationTitle: "introduction.exe",
-    presentationText: "presentation bout me",
+    presentationText:
+      "Hi there! My name is Daniele and this is my website. I'm a computer scientist, I study at the Univeristy of Bologna and in 2022/23 I worked as a web developer at CERN, Geneva. Computer science and software engineering aren't just a job to me but also a hobby, in fact I own a Raspberry Pi 5 that I use as a private cloud server and on which I installed numerous apps that I use daily both for work and entertainment.\nComputer science isn't the only science I like to study though and in my free time I also study some maths and physics; moreover for my bachelor thesis I decided to work on Type Theory, before fully dedicating to AI in my future studies.\nMy interests aren't only technical and academic, in fact I really love fashion, music and videogames too.\nOn this website you'll find some more informations about me",
     closeBoxCaption:
       "Why would you want to close this presentation about me that I spent so much time working on? (╥﹏╥)",
     hobbies: {
