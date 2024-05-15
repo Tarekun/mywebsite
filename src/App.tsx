@@ -1,4 +1,4 @@
-import { Box, PaletteMode, ThemeOptions, Typography } from "@mui/material";
+import { PaletteMode, ThemeOptions, Typography } from "@mui/material";
 import { OptimusUiApp } from "optimus-bo-ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -77,12 +77,10 @@ function App() {
           },
         }}
       >
-        <Box padding={2}>
-          <Routes>
-            <Route path={ROUTES.home} element={<Home />} />
-            <Route path={ROUTES.funFacts} element={<FunFacts />} />
-          </Routes>
-        </Box>
+        <Routes>
+          <Route path={ROUTES.home} element={<Home />} />
+          <Route path={ROUTES.funFacts} element={<FunFacts />} />
+        </Routes>
       </OptimusUiApp>
     </BrowserRouter>
   );

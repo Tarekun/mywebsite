@@ -35,6 +35,8 @@ const brief = [
   "Svelte",
   "Unity",
   "Prometheus+Grafana",
+  "Suricata",
+  "ELK Stack",
 ];
 
 export default function Tools() {
