@@ -13,6 +13,7 @@ const italianPack = {
         "Ho interessi piuttosto variegati e che potresti non aspettarti. Questo è un elenco non esaustivo delle cose che mi piacciono di più",
     },
     projects: {
+      accordionLabel: "Lista progetti",
       defaultDescription:
         "Clicca il file di uno dei progetti caricati (in verde) e una descrizione a riguardo comparirà qui.",
       sectionTitle: "Miei progetti",
@@ -78,6 +79,7 @@ const englishPack: LanguagePackSchema = {
         "I very different interests that you probably wouldn't expect. This is a non exhaustive summary of the things I like the most",
     },
     projects: {
+      accordionLabel: "Projects list",
       defaultDescription:
         "Click on one of the projects' file (in green) and its description will show up here.",
       sectionTitle: "My projects",

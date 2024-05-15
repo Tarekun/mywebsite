@@ -51,7 +51,7 @@ const italianHobbies = [
   },
 ];
 
-const hobbies = [
+const englishHobbies = [
   {
     name: "Mathematics",
     description:
@@ -94,7 +94,11 @@ interface HobbyBoxProps {
   hobbyIdx: number;
 }
 function HobbyBox({ hobbyIdx }: HobbyBoxProps) {
+  const { selectedLocale } = useLanguagePack();
+
+  const hobbies = selectedLocale === "it" ? italianHobbies : englishHobbies;
   const hobby = hobbies[hobbyIdx];
+
   return (
     <Box sx={{ width: "100%", flexShrink: 0 }}>
       <Grid container alignContent="center" alignItems="center">
@@ -148,7 +152,9 @@ export default function Hobbies() {
         hobbies: { title, introduction },
       },
     },
+    selectedLocale,
   } = useLanguagePack<LanguagePackSchema>();
+  const hobbies = selectedLocale === "it" ? italianHobbies : englishHobbies;
 
   return (
     <SectionBox padding={2}>
