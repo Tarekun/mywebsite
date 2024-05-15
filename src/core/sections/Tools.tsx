@@ -17,8 +17,8 @@ const expert = [
 
   "Python",
   "FastAPI",
-  "Django",
   "Pytorch",
+  "Flask",
 
   "Java",
   "Spring boot",
@@ -33,9 +33,11 @@ const brief = [
   "C#",
   "Angular",
   "Svelte",
+  "Django",
   "Unity",
   "Prometheus+Grafana",
   "Suricata",
+  "Wazuh",
   "ELK Stack",
 ];
 
